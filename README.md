@@ -1,7 +1,7 @@
 # CKA-Practice
 ##### Practice for CKA Examination, use [Killercoda](https://killercoda.com/) or [Killer Shell](https://killer.sh/) to simulate Kubernetes environment. 
 
-0. [Create local Kubernetes cluster](https://github.com/haffizhissham/CKA-Practice/tree/main/0.%20Kubernetes%20First%20Practice) - via Minikube
+0. [Create local Kubernetes cluster](https://github.com/haffizhissham/CKA-Practice/tree/main/0.%20Kubernetes%20First%20Practice) | Using **Minikube**
 
 1. [Question 1](https://github.com/haffizhissham/CKA-Practice/tree/main/0.%20Kubernetes%20First%20Practice)
     *   Create a pod called **my-web**; image = **nginx**, **sleep after 2200 seconds**
