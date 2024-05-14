@@ -10,6 +10,8 @@ nginx and 1 replica .Next upgrade the deployment to version nginx:1.25 using
 rolling update.Make sure that version upgrade is recorded in the resource annotation.
 
 3.Set up a Kubernetes deployment named app-server using the my-app-server:v1 image and initially scale it to 5 replicas. Ensure that the deployment is configured to maintain the desired number of pods, even if some pods fail.
+---
+my-app-server = use our own containerised app; eg, haffizhissham0/node_app-demo:v1
 ```
 
 
