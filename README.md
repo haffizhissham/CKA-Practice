@@ -22,8 +22,10 @@ Ensure that the pod automatically restarts in case of any failure.
 2. [Question Set 4](https://github.com/haffizhissham/CKA-Practice/tree/main/4.%20Kubernetes%20Test%20Questions%20%E2%80%93%204)
 
 3. [Question Set 5](https://github.com/haffizhissham/)
+
 4. [Question Set 6](https://github.com/haffizhissham/)
-5. [Question Set 7](https://github.com/haffizhissham/)
+
+5. [Question Set 7; 20 May 2024](https://github.com/haffizhissham/)
     * Create a **Persistent Volume (PV)** and a corresponding **Persistent Volume Claim (PVC)** and then use it in a Pod.
       * Create a Persistent Volume named **data-pv** with the following specifications:
         * Capacity: 2Gi
