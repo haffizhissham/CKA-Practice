@@ -1,4 +1,4 @@
-# Kubernetes Test Questions 5
+# Kubernetes Test Questions 5; 16 May 2024
 ##### Questions
 ```
 1. Create a replicaset named "appychip" using the NGINX image with a replica count of 4. Ensure that the total count of pods running in the cluster does not exceed 4, considering that there is already a pod running in the cluster.

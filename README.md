@@ -17,15 +17,15 @@ Ensure that the pod automatically restarts in case of any failure.
         * Container 1 should be named 'nginx-container' and use the NGINX image, while Container 2 should be named 'busybox-container' and use the BusyBox image with a command to sleep for 4800 seconds. 
         * Provide the YAML configuration for this pod setup, ensuring that both containers are correctly defined. Additionally, discuss any considerations or potential issues when deploying pods with multiple containers.
 
-1. [Question Set 3; 9 May 2024](https://github.com/haffizhissham/CKA-Practice/tree/main/3.%20Kubernetes%20Test%20Questions%20%E2%80%93%203)
+3. [Question Set 3; 9 May 2024](https://github.com/haffizhissham/CKA-Practice/tree/main/3.%20Kubernetes%20Test%20Questions%20%E2%80%93%203)
 
-2. [Question Set 4; 10 May 2024](https://github.com/haffizhissham/CKA-Practice/tree/main/4.%20Kubernetes%20Test%20Questions%20%E2%80%93%204)
+4. [Question Set 4; 10 May 2024](https://github.com/haffizhissham/CKA-Practice/tree/main/4.%20Kubernetes%20Test%20Questions%20%E2%80%93%204)
 
-3. [Question Set 5; 16 May 2024](https://github.com/haffizhissham/)
+5. [Question Set 5; 16 May 2024](https://github.com/haffizhissham/)
 
-4. [Question Set 6; 17 May 2024](https://github.com/haffizhissham/)
+6. [Question Set 6; 17 May 2024](https://github.com/haffizhissham/)
 
-5. [Question Set 7; 20 May 2024](https://github.com/haffizhissham/)
+7. [Question Set 7; 20 May 2024](https://github.com/haffizhissham/)
     * Create a **Persistent Volume (PV)** and a corresponding **Persistent Volume Claim (PVC)** and then use it in a Pod.
       * Create a Persistent Volume named **data-pv** with the following specifications:
         * Capacity: 2Gi
