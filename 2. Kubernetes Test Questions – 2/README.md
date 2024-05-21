@@ -53,4 +53,18 @@ Provide the YAML configuration for this pod setup, ensuring that both containers
    * Add `restartPolicy: Always` in the YAML code. Connect to **node01** again to edit the **manifest file**
    * ![edit q1 script](Pictures/7.png)
 
+
+<br>
+<br>
+
 ## Question 2:
+1. Run a **dry-run** command to generate a basic YAML file, `kubectl run pod-multi --image=nginx -o yaml --dry-run=client > pod-multi.yml`
+   * ![pod-multi.yml](Pictures/8.png)
+
+2. Edit **pod-multi.yml** file following question’s requirements. `nano pod-multi.yml`
+   * ![edited pod-multi.yml](Pictures/9.png)
+
+3. Apply the YAML config to create containers. `kubectl apply -f pod-multi.yml`
+   * Check pods created
+   * ![check pod created](Pictures/10.png)
+   * ![describe pod created](Pictures/11.png)
