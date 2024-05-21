@@ -70,7 +70,7 @@ my-app-server = use our own containerised app; eg, haffizhissham0/node_app-demo:
       status: {}
       ``` 
 
-2. Create a **Deployment** bash file, save the file as `deployment.sh`
+2. Create a **Deployment** bash file, copy the script below and save it as `deployment.sh`
    * Run bash script, `bash deployment.sh` to create deployments/pods
    * ```bash
       #!/bin/bash
@@ -111,10 +111,9 @@ my-app-server = use our own containerised app; eg, haffizhissham0/node_app-demo:
       kubectl get deployment
       kubectl get pod
       ```
+   * ![create deployments/pods](Pictures/8.png)
 
-3. ![create deployments/pods](Pictures/8.png)
-
-4. Create a **Deployment Delete** bash file, save the file as `delete-deployment.sh`
+4. Create a **Deployment Delete** bash file, copy script below and save the file as `delete-deployment.sh`
    * Run bash script, `bash delete-deployment.sh` to delete previous deployments/pods create
    * ```bash
       #!/bin/bash
@@ -150,4 +149,4 @@ my-app-server = use our own containerised app; eg, haffizhissham0/node_app-demo:
       kubectl get deployment
       kubectl get pod
       ```
-5. ![destroyed deployments/pods](Pictures/9.png)
+   * ![destroyed deployments/pods](Pictures/9.png)
