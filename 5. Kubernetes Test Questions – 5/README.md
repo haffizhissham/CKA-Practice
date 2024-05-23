@@ -13,5 +13,38 @@ For egress traffic, allow traffic to an IP range of your choice on port 5978.
 
 
 ## Question 1:
-1.	Run this command, ```kubectl run my-web --image=nginx --command sleep 2200 --dry-run=client -o yaml > nginx.yml```
-   * ![question 1 step 1](Pictures/1.png)
+1. Create a YAML script for replicaset, set the **replica value to 1**
+   * `nano appychip.yaml`
+   * ```yaml
+      apiVersion: apps/v1
+      kind: ReplicaSet
+      metadata:
+         name: appychip
+         labels:
+            app-type: replicaset
+      spec:
+         # modify replicas amount according to your case
+         replicas: 1
+         selector:
+            matchLabels:
+               app-type: replicaset
+         template:
+            metadata:
+               labels:
+                  app-type: replicaset
+            spec:
+               containers:
+               - name: nginx    
+               image: nginx
+      ```
+2. Apply the YAML script to deploy the pod, and pod quantity
+   * `kubectl apply -f appychip.yaml` & `kubectl get pods`
+   * ![run script and check pods](Pictures/1.png)
+
+3. Edit the YAML file to **change** the **replicas value to 4**
+   * Reapply the YAML script and check pod quantity again
+   * ![rerun script and check pods again](Pictures/2.png)
+
+
+## Question 2:
+1. Create
