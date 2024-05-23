@@ -89,33 +89,33 @@ Ensure that the version upgrade is recorded in the resource annotation
 
 ## Question 3:
 1. Create a pod named **dns-resolver** using the **NGINX image**, `kubectl apply -f pod-multi.yml`
-  * ![run pod](Pictures/5.png)
+     * ![run pod](Pictures/5.png)
 
 2. Expose the pod internally within the cluster under service named **dns-resolver-service**
-  * `kubectl expose pod dns-resolver --name=dns-resolver-service --port=80 --target-port=80 --type=ClusterIP` 
-  * View service created, `kubectl get svc`
-    * ![get svc](Pictures/6.png)
+     * `kubectl expose pod dns-resolver --name=dns-resolver-service --port=80 --target-port=80 --type=ClusterIP` 
+     * View service created, `kubectl get svc`
+       * ![get svc](Pictures/6.png)
 
 3. Verify the pods and service name are resolveable from within the cluster
-  * Utilize the **BusyBox image** version **1.28** for DNS lookup  
-  * Save the result of the DNS lookup in the file **/root/nginx.svc**
-  * Run, `kubectl run test-nslookup --image=busybox:1.28  --rm -it --restart=Never -- nslookup dns-resolver-service > /root/nginx.svc `
-  * View the DNS lookup result, `cat /root/nginx.svc`
-    * ![DNS lookup result](Pictures/7.png)
+     * Utilize the **BusyBox image** version **1.28** for DNS lookup  
+     * Save the result of the DNS lookup in the file **/root/nginx.svc**
+     * Run, `kubectl run test-nslookup --image=busybox:1.28  --rm -it --restart=Never -- nslookup dns-resolver-service > /root/nginx.svc `
+     * View the DNS lookup result, `cat /root/nginx.svc`
+       * ![DNS lookup result](Pictures/7.png)
 
 
 ## Question 4:
 1. Create a new Deployment named "**my-project**" with the **NGINX image**, `kubectl create deployment my-project --image=nginx`
 
 2. Set the deployment to **use** nginx image **version 1.25**.
-  * Use rolling update strategy. 
-  * Ensure that the version upgrade is **recorded** in the resource annotation
-  * `kubectl set image deployment/my-project nginx=nginx:1.25 –record`
-    * ![set image on deployment](Pictures/8.png)
+     * Use rolling update strategy. 
+     * Ensure that the version upgrade is **recorded** in the resource annotation
+     * `kubectl set image deployment/my-project nginx=nginx:1.25 –record`
+       * ![set image on deployment](Pictures/8.png)
 
 3. Describe the pod again to check the deployment image, `kubectl describe pods my-project-***`
-  * ![pod description](Pictures/9.png)
-  * ![pod description 2](Pictures/10.png)
+     * ![pod description](Pictures/9.png)
+     * ![pod description 2](Pictures/10.png)
 
 4. Check rollout history, `kubectl rollout history deployment my-project`
-  * ![rollout history](Pictures/11.png)
+     * ![rollout history](Pictures/11.png)
