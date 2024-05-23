@@ -54,10 +54,16 @@ Ensure that the pod automatically restarts in case of any failure.
      * Include namespace and pod selectors in the policy. 
      * Ensure that the ports allowed for ingress traffic are limited to 6379.
      * For egress traffic, allow traffic to an IP range of your choice on port 5978.
+   * Imagine you're managing a Kubernetes cluster with various namespaces and pods. 
+     * You need to create a script to help you find pods efficiently. 
+     * Write a command to list all pods sorted by their status. 
+     * Additionally, write another command to list pods sorted by their namespace. 
+     * Provide the commands you would use for each sorting criterion.
 
 <br>
 
 6. [Question Set 6; 17 May 2024](https://github.com/haffizhissham/CKA-Practice/tree/main/6.%20Kubernetes%20Test%20Questions%20%E2%80%93%206)
+   * Create 
 
 <br>
 
