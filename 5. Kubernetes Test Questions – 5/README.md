@@ -11,6 +11,13 @@ For egress traffic, allow traffic to an IP range of your choice on port 5978.
 3. Imagine you're managing a Kubernetes cluster with various namespaces and pods. You need to create a script to help you find pods efficiently. Write a command to list all pods sorted by their status. Additionally, write another command to list pods sorted by their namespace. Provide the commands you would use for each sorting criterion.
 ```
 
+<br>
+
+## References:
+1. [ReplicaSet | Kubernetes](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)
+2. [Network Policies | Kubernetes](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
+
+<br>
 
 ## Question 1:
 1. Create a YAML script for replicaset, set the **replica value to 1**
@@ -37,6 +44,7 @@ For egress traffic, allow traffic to an IP range of your choice on port 5978.
                - name: nginx    
                image: nginx
       ```
+
 2. Apply the YAML script to deploy the pod, and pod quantity
    * `kubectl apply -f appychip.yaml` & `kubectl get pods`
    * ![run script and check pods](Pictures/1.png)
@@ -47,4 +55,50 @@ For egress traffic, allow traffic to an IP range of your choice on port 5978.
 
 
 ## Question 2:
-1. Create
+1. Create a Network Policy YAML script, **network.yaml** .Refer to Kubernetes documentation
+   * ```yaml
+      apiVersion: networking.k8s.io/v1
+      kind: NetworkPolicy
+      metadata:
+         name: appychip
+         namespace: default
+      spec:
+         podSelector:
+            matchLabels:
+               role: db
+         policyTypes:
+         - Ingress
+         - Egress
+         ingress:
+         - from:
+            - ipBlock:
+               cidr: 172.17.0.0/16
+               except:
+               - 172.17.1.0/24
+            - namespaceSelector:
+               matchLabels:
+                  project: myproject
+            - podSelector:
+               matchLabels:
+                  role: frontend
+            ports:
+            - protocol: TCP
+               port: 6379
+         egress:
+         - to:
+            - ipBlock:
+               cidr: 10.0.0.0/24
+            ports:
+            - protocol: TCP
+               port: 5978
+      ```
+
+2. Apply the YAML script to deploy the network policy
+   * `kubectl apply -f appychip.yaml`
+   * ![apply network policy](Pictures/3.png)
+
+3. Check network policy created, `kubectl get networkpolicy appychip` & `kubectl describe networkpolicy appychip`
+   * ![check network policy](Pictures/4.png)
+
+## Question 3:
+1. Create a Ne
