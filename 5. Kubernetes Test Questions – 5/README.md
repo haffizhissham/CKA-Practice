@@ -16,6 +16,7 @@ For egress traffic, allow traffic to an IP range of your choice on port 5978.
 ## References:
 1. [ReplicaSet | Kubernetes](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)
 2. [Network Policies | Kubernetes](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
+3. [Complete list of pod statuses | StackOverflow](https://stackoverflow.com/questions/69035324/complete-list-of-pod-statuses#comment122014046_69035324)
 
 <br>
 
@@ -55,7 +56,7 @@ For egress traffic, allow traffic to an IP range of your choice on port 5978.
 
 
 ## Question 2:
-1. Create a Network Policy YAML script, **network.yaml** .Refer to Kubernetes documentation
+1. Create a Network Policy YAML script, **network.yaml** . Refer to Kubernetes documentation
    * ```yaml
       apiVersion: networking.k8s.io/v1
       kind: NetworkPolicy
@@ -101,4 +102,20 @@ For egress traffic, allow traffic to an IP range of your choice on port 5978.
    * ![check network policy](Pictures/4.png)
 
 ## Question 3:
-1. Create a Ne
+1. Sort all pods by their status
+   * `kubectl get pods -A --sort-by=status.phase`
+   * `-A` = switch to get all  of the pods
+   * `--sort` = sort element
+   * ![pod status sorted](Pictures/5.png)
+
+2. Additional:
+   1. Get count of pods for each state, `kubectl get pod -A --no-headers |awk '{arr[$4]++}END{for (a in arr) print a, arr[a]}'`
+      * ![pod state count](Pictures/6.png)
+      * ![example: pod state count](Pictures/7.png)
+
+3. Sort all pods by their namespace, `kubectl get pods -A --sort-by=metadata.namespace`
+   * `-A` = switch to get all  of the pods
+   * tips: try to put output in JSON format to get the fieldPath value, `kubectl get pods -A -o json | grep namespace`
+     * ![get namespace value for sorting](Pictures/8.png)
+   * Use the value (`metadata.namespace`) from tips above to sort the pods
+     * ![sorted namespace](Pictures/9.png)
