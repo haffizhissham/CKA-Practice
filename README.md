@@ -108,6 +108,6 @@ Ensure that the pod automatically restarts in case of any failure.
 
 <br>
 
-9. [Question Set 9; 23 May 2024](https://github.com/haffizhissham/CKA-Practice/)
+9. [Question Set 9; 24 May 2024](https://github.com/haffizhissham/CKA-Practice/)
    * Create a CronJob in Kubernetes named "backup-job" that runs every 5 minutes. Use the mysql:5.7 image for the job and set it to execute the command mysqldump -h mysql-service -u root -p <database_name> > /backup/backup.sql. 
      * This job should back up a MySQL database named "mydatabase". After running the job, save one of the pod logs to the file path /home/ubuntu/backup_logs.txt.
