@@ -63,11 +63,29 @@ Ensure that the pod automatically restarts in case of any failure.
 <br>
 
 6. [Question Set 6; 17 May 2024](https://github.com/haffizhissham/CKA-Practice/tree/main/6.%20Kubernetes%20Test%20Questions%20%E2%80%93%206)
-   * Create 
+   * SSH into the control plane node with ssh cluster2-controlplane1
+     * Check how the control plane components kubelet, kube-apiserver, kube-scheduler, kube-controller-manager, and etcd are started/installed on the control plane node. 
+     * Also, find out the name of the monitoring application and how it is started/installed on the control plane node. 
+     * Write your findings into the file /opt/training/10/controlplane-components.txt. 
+     * The file should be structured like:
+        * ```yaml
+          #/opt/training/10/controlplane-components.txt
+          Kubelet: [Type]
+          Kube-apiserver: [Type]
+          Kube-scheduler: [Type]
+          Kube-controller-manager: [Type]
+          Etcd: [Type]
+          Monitoring: [Type] [Name]
+            ```
+   * Create a namespace named techhub.
+     * Create a new network policy named internal-access in the techhub namespace.
+     * Requirements:
+       * Network policy should allow pods within the techhub namespace to connect to each other only on port 8080. 
+       * No other ports should be allowed.No pods from outside of the techhub namespace should be able to connect to any pods inside the techhub namespace. 
 
 <br>
 
-7. [Question Set 7; 20 May 2024](https://github.com/haffizhissham/CKA-Practice/tree/main/7.%20Kubernetes%20Test%20Questions%20%E2%80%93%207)
+1. [Question Set 7; 20 May 2024](https://github.com/haffizhissham/CKA-Practice/tree/main/7.%20Kubernetes%20Test%20Questions%20%E2%80%93%207)
     * Create a **Persistent Volume (PV)** and a corresponding **Persistent Volume Claim (PVC)** and then use it in a Pod.
       * Create a Persistent Volume named **data-pv** with the following specifications:
         * Capacity: 2Gi
@@ -91,3 +109,5 @@ Ensure that the pod automatically restarts in case of any failure.
 <br>
 
 9. [Question Set 9; 23 May 2024](https://github.com/haffizhissham/CKA-Practice/)
+   * Create a CronJob in Kubernetes named "backup-job" that runs every 5 minutes. Use the mysql:5.7 image for the job and set it to execute the command mysqldump -h mysql-service -u root -p <database_name> > /backup/backup.sql. 
+     * This job should back up a MySQL database named "mydatabase". After running the job, save one of the pod logs to the file path /home/ubuntu/backup_logs.txt.
