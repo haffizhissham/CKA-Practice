@@ -39,7 +39,7 @@ Requirements:
    * But if applicable, connect to controlplane node, `ssh controlplane`
    * ![ssh controlplane](Pictures/1.png)
 
-2. Get list of components available in controlplane, use find `/etc/kubernetes/manifests/`
+2. Get list of components available in controlplane, use `find /etc/kubernetes/manifests/`
    * Or `ls /etc/kubernetes/manifests/`
    * ![controlplane components](Pictures/2.png)
 
