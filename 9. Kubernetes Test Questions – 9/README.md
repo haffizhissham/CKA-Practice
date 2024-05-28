@@ -13,7 +13,7 @@ Use the mysql:5.7 image for the job and set it
 
 ## References:
 1. [Cron expression generator by Cronhub](https://crontab.cronhub.io/)
-2. [•	Export MySQL DB dump from Kubernetes pod and Restore MySQL DB on Kubernetes pod](https://medium.com/@madushagunasekara/export-mysql-db-dump-from-kubernetes-pod-and-restore-mysql-db-on-kubernetes-pod-6f4ecc6b5a64)
+2. [Export MySQL DB dump from Kubernetes pod and Restore MySQL DB on Kubernetes pod](https://medium.com/@madushagunasekara/export-mysql-db-dump-from-kubernetes-pod-and-restore-mysql-db-on-kubernetes-pod-6f4ecc6b5a64)
 
 
 ## Steps:
