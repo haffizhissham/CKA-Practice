@@ -108,6 +108,29 @@ Ensure that the pod automatically restarts in case of any failure.
 
 <br>
 
-9. [Question Set 9; 24 May 2024](https://github.com/haffizhissham/CKA-Practice/)
+9. [Question Set 9; 24 May 2024](https://github.com/haffizhissham/CKA-Practice/tree/main/09.%20Kubernetes%20Test%20Questions%20%E2%80%93%209)
    * Create a CronJob in Kubernetes named "backup-job" that runs every 5 minutes. Use the mysql:5.7 image for the job and set it to execute the command mysqldump -h mysql-service -u root -p <database_name> > /backup/backup.sql. 
      * This job should back up a MySQL database named "mydatabase". After running the job, save one of the pod logs to the file path /home/ubuntu/backup_logs.txt.
+
+<br>
+
+10. [Question Set 10; 27 May 2024](https://github.com/haffizhissham/CKA-Practice/)
+   * There is a multiple pods running in node. 
+     * Take a backup of the pod ETCD database and then
+     * delete the pod and restore the pod again. 
+   * You have a pod named my-web-pod running in your Kubernetes cluster
+     * Capture the logs and the container ID of the app-container container and save them to the specified locations. 
+     * Then, restart the app-container container and log the cluster events to the /root/cluster-events.log file.
+       * Save the logs to /root/app-logs.txt
+       * Save the container ID to /root/app-id.txt
+
+<br>
+
+11. [Question Set 11; 29 May 2024](https://github.com/haffizhissham/CKA-Practice/tree/main/11.%20Kubernetes%20Test%20Questions%20%E2%80%93%2011)
+   * Create a YAML file to define a pod named new-gpu that uses the busybox image. 
+     * Use nodeSelector to ensure the pod is scheduled only on nodes with the label type=cpu a̶n̶d̶ ̶r̶e̶s̶t̶o̶r̶e̶ ̶t̶h̶e̶ ̶b̶a̶c̶k̶u̶p̶ ̶a̶t̶ ̶v̶a̶r̶/̶l̶i̶b̶/̶m̶y̶n̶e̶w̶b̶a̶c̶k̶u̶p̶.
+
+<br>
+
+12.  [Question Set 12;  May 2024](https://github.com/haffizhissham/CKA-Practice/tree/main/)
+   * Create 
