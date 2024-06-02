@@ -26,7 +26,7 @@ Verify that the secret was created with the correct data
 <br>
 
 ## Question 1:
-1. 1.	Create a secret secret1, `kubectl create secret generic secret1 --from-literal=username=my_user1`
+1. Create a secret secret1, `kubectl create secret generic secret1 --from-literal=username=my_user1`
    * ![secret](Pictures/1.png)
 
 2. Create a YAML file for secretpod1, `nano secretpod1.yaml`
