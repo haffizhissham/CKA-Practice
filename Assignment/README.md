@@ -1,7 +1,7 @@
 # CKA-Practice
 ##### Practice for CKA Examination, use [Killercoda](https://killercoda.com/) or [Killer Shell](https://killer.sh/) to simulate Kubernetes environment. 
 
-0. [Create local Kubernetes cluster; 7 May 2024](https://github.com/haffizhissham/CKA-Practice/tree/main/0.%20Kubernetes%20First%20Practice) | Using **Minikube**
+0. [Create local Kubernetes cluster; 7 May 2024](00. Kubernetes First Practice/README.md)[Create local Kubernetes cluster; 7 May 2024](https://github.com/haffizhissham/CKA-Practice/tree/main/0.%20Kubernetes%20First%20Practice) | Using **Minikube**
 
 <br>
 
