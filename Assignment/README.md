@@ -126,17 +126,16 @@ Ensure that the pod automatically restarts in case of any failure.
 
 <br>
 
-11.  [Question Set 11; 29 May 2024](11.%20Kubernetes%20Test%20Questions%20%E2%80%93%2011)
+11. [Question Set 11; 29 May 2024](11.%20Kubernetes%20Test%20Questions%20%E2%80%93%2011)
    * Create a YAML file to define a pod named new-gpu that uses the busybox image. 
      * Use nodeSelector to ensure the pod is scheduled only on nodes with the label type=cpu a̶n̶d̶ ̶r̶e̶s̶t̶o̶r̶e̶ ̶t̶h̶e̶ ̶b̶a̶c̶k̶u̶p̶ ̶a̶t̶ ̶v̶a̶r̶/̶l̶i̶b̶/̶m̶y̶n̶e̶w̶b̶a̶c̶k̶u̶p̶.
 
 <br>
 
-12.  [Question Set 12; 30 May 2024](12.%20Kubernetes%20Test%20Questions%20–%2012)
+12. [Question Set 12; 30 May 2024](12.%20Kubernetes%20Test%20Questions%20–%2012)
    * Create a pod named secretpod1, using image nginx.
      * Setup the secret secret1 as a volume mount on the pod at path /etc/secret1
      * Verify that the secret was created with the correct data
-     * 
    * Create a yaml file to create a secret named secret2, with key value pairs
        * user2=my_user2
        * password2=P@ssword2
@@ -144,8 +143,9 @@ Ensure that the pod automatically restarts in case of any failure.
 
 <br>
 
-13.   [Question Set 13; 31 May 2024](13.%20Kubernetes%20Test%20Questions%20–%2013)
+13. [Question Set 13; 31 May 2024](13.%20Kubernetes%20Test%20Questions%20–%2013)
    * Create a new ClusterRole named resource-manager-clusterrole that only allows the deletion of the following resource types:
+     * Resources:
        * Pods
        * Services
        * ConfigMaps
