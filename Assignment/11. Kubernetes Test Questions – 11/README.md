@@ -15,7 +15,7 @@ Use nodeSelector to ensure the pod is scheduled only on nodes with the label typ
 <br>
 
 ## Question 1:
-1. **Create** a** YAML script**, `nano new-gpu.yml`
+1. **Create** a **YAML script**, `nano new-gpu.yml`
    * ```yaml
         apiVersion: v1
         kind: Pod
