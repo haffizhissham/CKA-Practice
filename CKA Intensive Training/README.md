@@ -1,0 +1,1 @@
+[CKA Intensive Training - Mock Exam 1](../Mock%20Exam/2nd%20to%204th%20Mock%20Exam%20-%20CKA%20Intensive%20Training/Mock%20Exam%201)
