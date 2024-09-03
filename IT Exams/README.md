@@ -17,6 +17,7 @@ Bind the new ClusterRole deployment-clusterrole to the new ServiceAccount cicd-t
 #### References:
 * https://kubernetes.io/docs/reference/kubectl/quick-reference/
 * https://kubernetes.io/docs/reference/access-authn-authz/rbac/
+* https://kubernetes.io/docs/reference/kubectl/generated/kubectl_create/kubectl_create_serviceaccount/#options
 
 1. Create a `ClusterRole` named `deployment-clusterrole` with only privillege to create *Deployment, Stateful Set, & DaemonSet*
    * `k create clusterrole deployment-clusterrole --verb=create --resource=deployment,statefulSet,daemonSet`
